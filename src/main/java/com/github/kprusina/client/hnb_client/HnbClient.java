@@ -6,7 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "hnbClient", url = "${hnb.api.url}")
+@FeignClient(name = "hnbClient", url = "https://api.hnb.hr/tecajn-eur/v3")
 public interface HnbClient {
 
   @GetMapping
