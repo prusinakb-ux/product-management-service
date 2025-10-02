@@ -6,7 +6,6 @@ import com.github.kprusina.exception.SoftException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Comparator;
-import java.util.List;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -26,17 +25,6 @@ public class CurrencyService {
 
     return priceEur.multiply(averageRate).setScale(2, RoundingMode.HALF_UP);
   }
-
-  //  private HnbRateDto fetchLatestRate(String targetCurrency) {
-  //    List<HnbRateDto> rates =
-  //        Optional.ofNullable(hnbClient.getRate(targetCurrency))
-  //            .filter(list -> !list.isEmpty())
-  //            .orElseThrow(() -> new SoftException("hnbRate.notFound", targetCurrency));
-  //
-  //    return rates.stream()
-  //        .max(Comparator.comparing(HnbRateDto::getEffectiveDate))
-  //        .orElseThrow(() -> new SoftException("hnbRate.notFound", targetCurrency));
-  //  }
 
   private HnbRateDto fetchLatestRate(String targetCurrency) {
     return Optional.ofNullable(hnbClient.getRate(targetCurrency))
