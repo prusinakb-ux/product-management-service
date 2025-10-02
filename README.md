@@ -138,7 +138,7 @@ spring.flyway.locations=classpath:db/migration
 spring.flyway.baseline-on-migrate=true
 ```
 
-## Technologies
+### Technologies
 
 - Java 21
 - Spring Boot 3.4.6
