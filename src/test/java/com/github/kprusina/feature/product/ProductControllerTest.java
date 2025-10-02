@@ -41,14 +41,12 @@ class ProductControllerTest {
     mockMvc =
         MockMvcBuilders.standaloneSetup(productController)
             .setMessageConverters(new MappingJackson2HttpMessageConverter(new ObjectMapper()))
-            // Add this to correctly handle Pageable arguments
             .setCustomArgumentResolvers(new PageableHandlerMethodArgumentResolver())
             .build();
   }
 
   @Test
   void testGetProductsEndpoint() throws Exception {
-    // Create a proper PageImpl with content, pageable, and total
     Page<ProductDto> emptyPage = new PageImpl<>(Collections.emptyList(), PageRequest.of(0, 10), 0);
 
     when(productService.getProducts(any(ProductFilter.class), any(Pageable.class)))

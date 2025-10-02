@@ -87,11 +87,11 @@ The service exposes an OpenAPI (Swagger) specification.
 
 ### Swagger UI
 
-Access the interactive Swagger UI:
+Access the Swagger UI:
 http://localhost:8080/swagger-ui/index.html
 
-This allows you to:
-Explore all endpoints
+You can use it to:
+Explore endpoints
 View request/response schemas
 Test API calls from the browser
 OpenAPI JSON
@@ -101,7 +101,7 @@ http://localhost:8080/v3/api-docs
 ## Testing
 
 - **Unit tests**: service and controller layers are tested using **JUnit 5** and **Mockito**, with dependencies mocked
-  for fast, isolated tests
+  for isolated tests
 - **Repository tests**: tested using **`@DataJpaTest`** with an **in-memory database (H2)** to verify saving and
   retrieving products
 - **Controller tests**: use **MockMvc** to verify REST endpoints return the expected responses
@@ -136,8 +136,6 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 spring.flyway.enabled=true
 spring.flyway.locations=classpath:db/migration
 spring.flyway.baseline-on-migrate=true
-# Feign
-hnb.api.url=https://api.hnb.hr/tecajn-eur/v3
 ```
 
 ## Technologies
