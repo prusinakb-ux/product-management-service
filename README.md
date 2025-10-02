@@ -140,12 +140,12 @@ spring.flyway.baseline-on-migrate=true
 
 ## Technologies
 
-Java 21
-Spring Boot 3.4.6
-Spring Data JPA (Hibernate)
-PostgreSQL
-Querydsl
-Swagger / OpenAPI (springdoc)
-Maven
-Docker / Docker Compose
-JUnit 5, Mockito, Testcontainers
+- Java 21
+- Spring Boot 3.4.6
+- Spring Data JPA (Hibernate)
+- PostgreSQL
+- Querydsl
+- Swagger / OpenAPI (springdoc)
+- Maven
+- Docker / Docker Compose
+- JUnit 5, Mockito, Testcontainers
