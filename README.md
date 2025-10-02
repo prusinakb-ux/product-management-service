@@ -120,7 +120,7 @@ src/test/java/com/github/kprusina/feature/product/ProductServiceTest.java    →
 src/test/java/com/github/kprusina/feature/product/ProductRepositoryTest.java → repository tests using @DataJpaTest with H2
 ```
 
-### Configuration
+## Configuration
 
 ```properties
 spring.application.name=product-management-service
@@ -138,7 +138,7 @@ spring.flyway.locations=classpath:db/migration
 spring.flyway.baseline-on-migrate=true
 ```
 
-### Technologies
+## Technologies
 
 - Java 21
 - Spring Boot 3.4.6
